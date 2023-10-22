@@ -1,2 +1,2 @@
 # breaking-videogames
-GitHub page for behind the scenes video game content
+For those who can't play a video game without dissecting it
