@@ -2,7 +2,7 @@
 layout: post
 title: "vtmb-strings-1"
 date: 2023-10-26 22:00:00 -0000
-categories: strings funny
+tags: strings funny
 ---
 
 Looks like the text indicating you don't have enough dots in Research (?) was going to have more jokes:
