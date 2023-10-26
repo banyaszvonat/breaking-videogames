@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "vtmb-strings-1"
 date: 2023-10-26 22:00:00 -0000
 tags: strings funny
