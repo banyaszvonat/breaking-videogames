@@ -1,3 +1,7 @@
+layout: page
+title: "VtMB Strings 1"
+permalink: /vtmb_strings1
+
 Looks like the text indicating you don't have enough dots in Research (?) was going to have more jokes:
 
 ```
