@@ -2,4 +2,8 @@ remote_theme: pages-themes/midnight@v0.2.0
 future: true
 plugins:
   - jekyll-remote-theme
+  - jekyll-feed
 basewebsite: /breaking-videogames
+title: Breaking Videogames
+description: For those who can't play a video game without dissecting it
+author: banyaszvonat
