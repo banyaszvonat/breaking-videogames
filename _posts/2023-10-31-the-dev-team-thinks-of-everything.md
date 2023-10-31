@@ -16,4 +16,4 @@ Therese rolls or dives forward, then runs back to one of a couple of preset poin
 
 immediately crashes the game.
 
-![Back to index](/breaking-videogames/)
+[Back to index](/breaking-videogames/)

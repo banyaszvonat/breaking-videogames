@@ -23,4 +23,4 @@ Looks like the text indicating you don't have enough dots in Research (?) was go
 
 Me too, game, me too.
 
-![Back to index](/breaking-videogames/)
+[Back to index](/breaking-videogames/)
