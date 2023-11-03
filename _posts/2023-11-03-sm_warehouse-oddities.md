@@ -11,10 +11,12 @@ During the quest Explosive Beginning, you visit a warehouse you need to blow up.
 
 ![](/breaking-videogames/assets/goofy_door.png)
 
-Once you break into the central office to plant explosives, you find these large windows. The partialy transparency seems to break for unknown reasons sometimes. Either feeding on an enemy or reloading the game seems to cause it.
+Once you break into the central office to plant explosives, you find these large windows. The partial transparency seems to break for unknown reasons sometimes. Either feeding on an enemy or reloading the game seems to cause it.
 
 ![](/breaking-videogames/assets/broken_alpha1.png)
 ![](/breaking-videogames/assets/broken_alpha2.png)
+
+These are supposed to be wooden window frames. I didn't take a screenshot of the normal appearance.
 
 Screenshots are taken with the Unofficial Patch 9.6 Basic version.
 
