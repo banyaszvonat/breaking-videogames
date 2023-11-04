@@ -18,6 +18,6 @@ Once you break into the central office to plant explosives, you find these large
 
 These are supposed to be wooden window frames. I didn't take a screenshot of the normal appearance.
 
-Screenshots are taken with the Unofficial Patch 9.6 Basic version.
+Screenshots are taken with the ~~Unofficial Patch 9.6 Basic~~ Unofficial Patch 9.5 Basic version.
 
 The next installment will probably feature an interesting bug/property of the picker tool, and an implementation detail that it allows you to deduce together with noclip. Stay tuned.
