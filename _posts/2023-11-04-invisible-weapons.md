@@ -63,7 +63,7 @@ Defined in [game/server/player.cpp](https://github.com/ValveSoftware/source-sdk-
 
 In turn it invokes two other functions, `CBaseEntity *FindEntityForward( CBasePlayer *pMe, bool fHull )` and failing that, `CBaseEntity *CGlobalEntityList::FindEntityNearestFacing( const Vector &origin, const Vector &facing, float threshold)`:
 
-```
+```C++
 //-----------------------------------------------------------------------------
 // Purpose: Finds the nearest entity in front of the player, preferring
 //			collidable entities, but allows selection of enities that are
@@ -98,7 +98,7 @@ Their respective definitions are here:
 
 I believe this explains the inconsistency with highlights:
 
-```
+```C++
 //-----------------------------------------------------------------------------
 // Purpose: Returns the nearest COLLIBALE entity in front of the player
 //			that has a clear line of sight. If HULL is true, the trace will
@@ -140,7 +140,7 @@ CBaseEntity *FindEntityForward( CBasePlayer *pMe, bool fHull )
 
 The `picker` command only cares about solids by default. So it's incorrect to say that the game will only highlight visible entities. Instead, it's going to prefer entities with collision. Failing that, it'll go through the global list of entities in the map, and after some filtering, tries to pick out the one whose position produces the smallest dot product with the player's facing:
 
-```
+```C++
 //-----------------------------------------------------------------------------
 // Purpose: Find the nearest entity along the facing direction from the given origin
 //			within the angular threshold (ignores worldspawn)
@@ -188,7 +188,7 @@ CBaseEntity *CGlobalEntityList::FindEntityNearestFacing( const Vector &origin, c
 ```
 This function ignores whether an entity has collision. It's likely that entities like level change triggers are caught by this branch. It's unclear why it's only called once the player outside the level bounds and/or looking into the void. I thought that it's because otherwise the ray hits the world and `FindEntityForward()` returns non-null, but this conditional seems to account for that:
 
-```
+```C++
 if ( tr.fraction != 1.0 && tr.DidHitNonWorldEntity() )
 ```
 
@@ -196,7 +196,7 @@ if ( tr.fraction != 1.0 && tr.DidHitNonWorldEntity() )
 
 My final guess is that it does fall through to `FindEntityNearestFacing()`, but in the engine version Vampire is running on, this conditional does not exist:
 
-```
+```C++
 if (!FStrEq( STRING(ent->m_iClassname), "worldspawn")  && !FStrEq( STRING(ent->m_iClassname), "soundent")) 
 ```
 
