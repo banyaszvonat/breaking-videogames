@@ -5,7 +5,7 @@ date: 2023-11-05 00:00:00 -0000
 tags: picker vtmb noclip 
 ---
 
-As mentioned in the last post, this one is going to go in depth on idiosyncracies of the `picker` command. I'd be hard-pressed to call them bugs, since it was never intended to be used by players. The command will draw a bounding box around the entity you're looking at, and display some debug text. (Note: this command appears to be [generally available](https://developer.valvesoftware.com/wiki/List_of_Team_Fortress_2_console_commands_and_variables/en#picker) in Source engine games.) There are additional commands to toggle different categories of information. One of the idiosyncracies will reveal an interesting implementation detail. 
+As mentioned in the last post, this one is going to go in depth on idiosyncrasies of the `picker` command. I'd be hard-pressed to call them bugs, since it was never intended to be used by players. The command will draw a bounding box around the entity you're looking at, and display some debug text. (Note: this command appears to be [generally available](https://developer.valvesoftware.com/wiki/List_of_Team_Fortress_2_console_commands_and_variables/en#picker) in Source engine games.) There are additional commands to toggle different categories of information. One of the idiosyncrasies will reveal an interesting implementation detail. 
 
 I was exploring outside the playable area inside the player's apartment. The developers employ a common trick for "interior" maps when a window to the outside world is needed, which is to clone just enough of the outside to make a convincing illusion. I was looking around on this cloned chunk for any oddities, and found this:
 
@@ -53,7 +53,7 @@ The picker command toggles the `CBaseEntity::m_bInDebugSelect` variable, which i
 
 [DrawAllDebugOverlays()](https://github.com/ValveSoftware/source-sdk-2013/blob/0d8dceea4310fde5706b3ce1c70609d72a38efdf/sp/src/game/server/gameinterface.cpp#L417)
 
-The function responsible for selecting the entity to draw debug info is:
+The function responsible for selecting the entity to draw debug info for is:
 
 ```
 CBaseEntity *FindPickerEntity( CBasePlayer *pPlayer )
@@ -193,5 +193,13 @@ if ( tr.fraction != 1.0 && tr.DidHitNonWorldEntity() )
 ```
 
 [Declaration of DidHitNonWorldEntity()](https://github.com/ValveSoftware/source-sdk-2013/blob/0d8dceea4310fde5706b3ce1c70609d72a38efdf/sp/src/public/gametrace.h#L39)
+
+My final guess is that it does fall through to `FindEntityNearestFacing()`, but in the engine version Vampire is running on, this conditional does not exist:
+
+```
+if (!FStrEq( STRING(ent->m_iClassname), "worldspawn")  && !FStrEq( STRING(ent->m_iClassname), "soundent")) 
+```
+
+Enabling picker mode will show worldspawn approximately all the time, which I thought was hardcoded behavior, but could just be this function consistently selecting worldspawn if nothing else is hit.
 
 [Back to index](/breaking-videogames/)
