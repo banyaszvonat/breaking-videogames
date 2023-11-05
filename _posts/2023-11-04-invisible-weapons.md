@@ -138,7 +138,7 @@ CBaseEntity *FindEntityForward( CBasePlayer *pMe, bool fHull )
 }
 ```
 
-The `picker` commands cares about solids only by default. So it's incorrect to say that the game will only highlight visible entities. Instead, it's going to prefer entities with collision. Failing that, it'll go through the global list of entities in the map, and after some filtering, tries to pick out the one whose position produces the smallest dot product with the player's facing:
+The `picker` command only cares about solids by default. So it's incorrect to say that the game will only highlight visible entities. Instead, it's going to prefer entities with collision. Failing that, it'll go through the global list of entities in the map, and after some filtering, tries to pick out the one whose position produces the smallest dot product with the player's facing:
 
 ```
 //-----------------------------------------------------------------------------
