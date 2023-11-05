@@ -47,11 +47,11 @@ Bizarrely, you can even have the picker select the viewmodel of your current wea
 
 Maybe this would have been a satisfying conclusion, but it's possible to find out for sure. After writing the above, I did some more research trying to find documentation on the command's behavior. As it turns out, its source code is available in the Source SDK:
 
-https://github.com/ValveSoftware/source-sdk-2013/blob/0d8dceea4310fde5706b3ce1c70609d72a38efdf/mp/src/game/server/baseentity.cpp#L5674
+[Declaration of the "picker" console command](https://github.com/ValveSoftware/source-sdk-2013/blob/0d8dceea4310fde5706b3ce1c70609d72a38efdf/mp/src/game/server/baseentity.cpp#L5674)
 
 The picker command toggles the `CBaseEntity::m_bInDebugSelect` variable, which is checked in `DrawAllDebugOverlays()` defined in `game/server/gameinterface.cpp`
 
-https://github.com/ValveSoftware/source-sdk-2013/blob/0d8dceea4310fde5706b3ce1c70609d72a38efdf/sp/src/game/server/gameinterface.cpp#L417
+[DrawAllDebugOverlays()](https://github.com/ValveSoftware/source-sdk-2013/blob/0d8dceea4310fde5706b3ce1c70609d72a38efdf/sp/src/game/server/gameinterface.cpp#L417)
 
 The function responsible for selecting the entity to draw debug info is:
 
