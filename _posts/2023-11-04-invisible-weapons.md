@@ -34,7 +34,7 @@ Another clue for people familiar with the game: this is one of the items you mig
 
 ![](/breaking-videogames/assets/lockpicks_picker.png)
 
-The real answer appears to be that what you're looking at is the contents of your inventory. Lockpicks are an item you pick up during the tutorial, and isn't available anywhere else in the game. It would appear that items in the player's inventory always float under/around the player, but are rendered invisible. However, the quirks of the raycast behavior mean that when you look down, you bounce the ray upwards, ignoring these entities' normal immunity to being highlighted.
+The real answer appears to be that what you're looking at is the contents of your inventory. Lockpicks are an item you pick up during the tutorial, and aren't available for pickup anywhere else in the game. It would appear that items in the player's inventory always float under/around the player, but are rendered invisible. However, the quirks of the raycast behavior mean that when you look down, you bounce the ray upwards, ignoring these entities' normal immunity to being highlighted.
 
 Let me repeat, though: at all times, your character's entire inventory is invisibly floating behind/under you.
 
@@ -186,7 +186,7 @@ CBaseEntity *CGlobalEntityList::FindEntityNearestFacing( const Vector &origin, c
 	return best_ent;
 }
 ```
-This function ignores collision. It's likely that entities like level change triggers are caught by this branch. It's unclear why it's only called once the player outside the level bounds and/or looking into the void. I thought that it's because otherwise the ray hits the world and `FindEntityForward()` returns non-null, but this conditional seems to account for that:
+This function ignores whether an entity has collision. It's likely that entities like level change triggers are caught by this branch. It's unclear why it's only called once the player outside the level bounds and/or looking into the void. I thought that it's because otherwise the ray hits the world and `FindEntityForward()` returns non-null, but this conditional seems to account for that:
 
 ```
 if ( tr.fraction != 1.0 && tr.DidHitNonWorldEntity() )
