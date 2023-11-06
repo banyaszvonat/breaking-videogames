@@ -94,7 +94,7 @@ CBaseEntity *FindPickerEntity( CBasePlayer *pPlayer )
 Their respective definitions are here:
 
 [FindEntityForward()](https://github.com/ValveSoftware/source-sdk-2013/blob/0d8dceea4310fde5706b3ce1c70609d72a38efdf/sp/src/game/server/player.cpp#L5726)
-[FindNearestFacing()](https://github.com/ValveSoftware/source-sdk-2013/blob/0d8dceea4310fde5706b3ce1c70609d72a38efdf/sp/src/game/server/entitylist.cpp#L1043)
+[FindEntityNearestFacing()](https://github.com/ValveSoftware/source-sdk-2013/blob/0d8dceea4310fde5706b3ce1c70609d72a38efdf/sp/src/game/server/entitylist.cpp#L1043)
 
 I believe this explains the inconsistency with highlights:
 
@@ -186,7 +186,7 @@ CBaseEntity *CGlobalEntityList::FindEntityNearestFacing( const Vector &origin, c
 	return best_ent;
 }
 ```
-This function ignores whether an entity has collision. It's likely that entities like level change triggers are caught by this branch. It's unclear why it's only called once the player outside the level bounds and/or looking into the void. I thought that it's because otherwise the ray hits the world and `FindEntityForward()` returns non-null, but this conditional seems to account for that:
+This function ignores whether an entity has collision. It's likely that entities like level change triggers are caught by this branch. It's unclear why it's only called once the player is outside the level bounds and/or looking into the void. I thought that it's because otherwise the ray hits the world and `FindEntityForward()` returns non-null, but this conditional seems to account for that:
 
 ```C++
 if ( tr.fraction != 1.0 && tr.DidHitNonWorldEntity() )
