@@ -14,7 +14,7 @@ And the tracksuit guys as "shark":
 ![](/breaking-videogames/assets/westside_sharks.jpg)
 ![](/breaking-videogames/assets/westside_sharks_2.jpg)
 
-This seems to be a reference the musical West Side Story.
+This seems to be a reference to the musical West Side Story.
 
 An aside: this gang fight seems to be set up as a one-off event. The NPCs don't seem to respawn in general, although I spotted an `npc_maker` entity related to pedestrians that might be worth looking into later.
 
