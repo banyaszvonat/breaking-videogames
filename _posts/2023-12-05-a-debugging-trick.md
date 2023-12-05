@@ -11,7 +11,7 @@ Normally, when an application is compiled for release, one of the differences co
 
 Symbol names are text strings meant to identify a function to *humans* writing or debugging the application. To simplify things, since the OS only needs the address of a function to call it[^1], such names are extraneous. Presumably, symbols are also stripped from release builds because of people like me (reverse engineers.) 
 
-What all this means, is that when you load up an executable in your tool of choice, it usually looks like this:
+What all this means is that when you load up an executable in your tool of choice, it usually looks like this:
 
 ![](/breaking-videogames/assets/funcnames.jpg)
 
@@ -27,7 +27,7 @@ Helpfully, r2's autoanalysis filled in the global variable names, and even notic
 
 ![](/breaking-videogames/assets/stringreffunc.jpg)
 
-In summary: even though the binary is stripped, some symbols could be recovered from code maintaining an in-engine stack trace. This gives a headstart with reverse engineering, since it provides something to get oriented by, closer to the actual functionality to of interest.
+In summary: even though the binary is stripped, by inspecting strings contained in the application, and what refers to them, some symbols could be recovered from code maintaining an in-engine stack trace. While the particular function with a debug string that inspired this post was found randomly, in this example functions' names can reliably be found by inspecting which functions load the particular debug string. This gives a headstart with reverse engineering, since it provides something to get oriented by, closer to the actual functionality of interest.
 
 There are also calls to a `DevMsg` function, but that's potentially for a later post.
 
