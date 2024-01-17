@@ -19,7 +19,7 @@ When you open up a save file, you might notice that each block begins with `0x78
 
 The censored parts are fragments of PATH. No idea why it does that.
 
-Decompressing it via a quick python script yields something that looks like another serialized format. `VALV` or `VALVu` is likely another magic header, but information about this is scarce. Here's an example. Note that it's not the same block as depicted of the uncompressed block.
+Decompressing it via a quick python script yields something that looks like another serialized format. `VALV` or `VALVu` is likely another magic header, but information about this is scarce. Here's an example. Note that it's not the same block as depicted above.
 
 ![](/breaking-videogames/assets/uncompressed_block.png)
 
