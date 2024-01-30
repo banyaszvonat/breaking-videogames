@@ -31,7 +31,7 @@ Initially I thought it was a simple matter of running out of memory to allocate,
 
 ![](/breaking-videogames/assets/crashloc.jpg)
 
-`ecx` is supposed to hold a pointer, but it's zero in our crash log. `eip` is consistent between runs. Luckily, this pointer's location (`0x21300c88`) is also static, and it's assigned in two places in the entirety of `engine.dll`. One of them essentially just does `xor eax, eax; mov [0x21300c88], eax`, so only the other one is of interest:
+`ecx` is supposed to hold a pointer, but it's zero in our crash log. `eip` is consistent between runs. Luckily, this pointer's location (`0x21300c88`) is also static, and it's assigned in two places in the entirety of `engine.dll`. One of them essentially just does `xor eax, eax; mov 0x21300c88, eax`, so only the other one is of interest:
 
 ![](/breaking-videogames/assets/ServerGameDLL_addr_assignment.jpg)
 
