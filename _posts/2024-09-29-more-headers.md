@@ -10,7 +10,7 @@ Quick update: we are in `CRestore::SetReadPos`, having been called from `CSaveRe
 ![](/breaking-videogames/assets/crestore_setreadpos.jpg)
 
 
-![](/breaking-videogames/assets/csaverestoreblockhandler_readrestoreheaders.jpg)
+![](/breaking-videogames/assets/csaverestoreblockset_readrestoreheaders.jpg)
 
 [The code in the SDK source](https://github.com/ValveSoftware/source-sdk-2013/blob/0d8dceea4310fde5706b3ce1c70609d72a38efdf/mp/src/game/shared/saverestore.cpp#L3195)
 
