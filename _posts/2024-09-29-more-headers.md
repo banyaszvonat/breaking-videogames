@@ -24,7 +24,7 @@ The field in question is highlighted here in green, and according to this, we sh
 
 ![](/breaking-videogames/assets/nentities.jpg)
 
-Counting the entries by searching the range `0x9000`-`0x17CEE` [^1] for ASCII strings of at least 3 characters that start with 6 gets us...
+Counting the entries by searching the range `0x9000`-`0x17CEE`[^1] for ASCII strings of at least 3 characters that start with 6 gets us...
 
 ![](/breaking-videogames/assets/stringsearch.jpg)
 
