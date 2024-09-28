@@ -18,7 +18,7 @@ Quick update: we are in `CRestore::SetReadPos`, having been called from `CSaveRe
 
 `CEntitySaveRestoreBlockHandler::ReadRestoreHeaders` tells us that the first field is an integer, `nEntities`:
 
-[SDK source]https://github.com/ValveSoftware/source-sdk-2013/blob/0d8dceea4310fde5706b3ce1c70609d72a38efdf/mp/src/game/shared/saverestore.cpp#L2533
+[SDK source](https://github.com/ValveSoftware/source-sdk-2013/blob/0d8dceea4310fde5706b3ce1c70609d72a38efdf/mp/src/game/shared/saverestore.cpp#L2533)
 
 The field in question is highlighted here in green, and according to this, we should expect 916 entities.
 
