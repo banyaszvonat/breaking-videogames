@@ -24,7 +24,7 @@ The field in question is highlighted here in green, and according to this, we sh
 
 ![](/breaking-videogames/assets/nentities.jpg)
 
-Counting the entries by searching the range `0x9000`-`0x17CEE` [^0] for ASCII strings of at least 3 characters that start with 6 gets us...
+Counting the entries by searching the range `0x9000`-`0x17CEE` [^1] for ASCII strings of at least 3 characters that start with 6 gets us...
 
 ![](/breaking-videogames/assets/stringsearch.jpg)
 
@@ -38,10 +38,9 @@ This suggests a game plan for finding the Python data:
 - Reverse engineer `CPythonSaveRestoreBlockHandler::ReadRestoreHeaders` to see what fields it contains
 - To get the actual data, do the same with `CSaveRestoreBlockSet::CallBlockHandlerRestore` and `GetBlockDataLoc`
 
-
 ----
 
-[^0] `nEntities` is at offset `0x9010` in the file, while the last string that falls into the pattern of starting with a 6 is at `0x17BF2`. 
+[^1] `nEntities` is at offset `0x9010` in the file, while the last string that falls into the pattern of starting with a 6 is at `0x17BF2`. 
 
 ----
 
