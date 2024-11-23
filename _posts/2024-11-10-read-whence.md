@@ -61,3 +61,7 @@ So far, I've been able to make things easy by referencing the source code, but t
 Incidentally, setting a breakpoint on `CPython_SaveRestoreBlockHandler::ReadRestoreHeaders` as well as `CEntity_SaveRestoreBlockHandler::ReadRestoreHeaders` revealed that the Python block either does in fact get processed later than the entities block, or the game touches both blocks multiple times during loading.
 
 We can take a shortcut around trying to comprehend the header format by noticing that `CSaveRestoreBlockSet::CallBlockHandlerRestore` calls `GetBlockHeaderLoc` and sets the read location on the `IRestore` instance that `CPython_SaveRestoreBlockHandler::Restore` gets as an argument. This gives us an offset into the save data file after it has been mapped into memory. 
+
+----
+
+[Back to index](/breaking-videogames/)
