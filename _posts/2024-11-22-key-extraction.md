@@ -2,7 +2,7 @@
 layout: default
 title: "key-extraction"
 date: 2024-11-22 21:30:00 -0000
-tags: psp savegame emulation mips
+tags: psp savegame emulation mips disgaea
 ---
 
 I've been procrastinating on getting back to Vampire, so this is post is going to be about PSP savegames. Looking to reverse engineer a save game, I quickly found out that PSP savegames are encrypted.
