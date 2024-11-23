@@ -21,7 +21,7 @@ The README also helpfully linked to a key dumper plugin, whose behavior I decide
 
 This plugin searches for `sceUtilitySavedataInitStart`, hooks it and grabs the key from the save data structure it gets passed. 
 
-At first I was confused by how `FindExport` works [here](https://github.com/bucanero/psptools/blob/ee050436680455812726c651709a194acf441040/SGKeyDumper/src/main.c#L99), but as I later learned, the third parameter is the so-called "NID", the first 32 bits of [an export's name](https://wololo.net/2012/05/30/syscalls-nids-imports/), used as the identifier. Either way, the next line names the function we're looking for.
+At first I was confused by how `FindExport` works [here](https://github.com/bucanero/psptools/blob/ee050436680455812726c651709a194acf441040/SGKeyDumper/src/main.c#L99), but as I later learned, the third parameter is the so-called "NID", the first 32 bits of the SHA-1 hash of [an export's name](https://wololo.net/2012/05/30/syscalls-nids-imports/), used as the identifier. Either way, the next line names the function we're looking for.
 
 ----
 
@@ -51,7 +51,7 @@ At addresses slightly below the one in `s0`, there is something that looks like 
 
 ![](/breaking-videogames/assets/memory.jpg)
 
-At this point I decided to see if I can find something about the structure passed to `sceUtilitySavedataInitStart`, to see if the definition fits the data. First, there was a false start, when I found [old documentation](https://www.freeshell.de/~sven/pspsdk/structSceUtilitySavedataParam.html) from the unofficial PSP SDK called psp-sdk. However, this seemed to be incomplete and/or wrong. I saw similar claims in a thread [about someone trying to do the same thing](https://wololo.net/talk/viewtopic.php?t=43988)
+At this point I decided to see if I can find something about the structure passed to `sceUtilitySavedataInitStart`, to see if the definition fits the data. First, there was a false start, when I found [old documentation](https://www.freeshell.de/~sven/pspsdk/structSceUtilitySavedataParam.html) from the unofficial PSP SDK called psp-sdk. However, this seemed to be incomplete and/or wrong. I saw similar claims in a thread [about someone trying to do the same thing](https://wololo.net/talk/viewtopic.php?t=43988).
 
 The SDK [on GitHub](https://github.com/pspdev/pspsdk/blob/master/src/utility/psputility_savedata.h#L192) seems more accurate.
 
