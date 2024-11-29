@@ -216,14 +216,15 @@ int main(int argc, char *argv[])
 	if(!res_d1char)
 	{
 		fprintf(stderr, "%s: parse failed lol\n", argv[1]);
+		close(fd);
 		return 2;
 	}
 
 	h_pprintln(stdout, res_d1char->ast);
 
+	close(fd);
 	return 0;
 }
-
 ```
 
 It's also available [on GitHub](https://github.com/banyaszvonat/disgaea_parser).
