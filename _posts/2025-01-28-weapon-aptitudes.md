@@ -28,4 +28,8 @@ The parser has been updated with the new field definitions, although the enums f
 
 ----
 
+Update 2/9/2025: Apparently it's [documented](https://disgaea.fandom.com/wiki/Weapon_Mastery) after all. The wiki page also identifies the official names as "Weapon Mastery", and gives the formula for converting weapon XP to weapon level.
+
+----
+
 [Back to index](/breaking-videogames/)
