@@ -48,10 +48,10 @@ Changing values in memory and observing corresponding changes, the following one
 
 After identifying the ailment flags, I noticed that the function that computes the cost of healing at the hospital also checks a few more addresses in memory after them. So I tried casting some buffs and debuffs with the memory viewer open, and the following fields seem to store them:
 
--`0x30C`: Braveheart/Enfeeble
--`0x30D`: Shield/Armor Break
--`0x30E`: Magic Wall
--`0x30F`: Magic Boost
+- `0x30C`: Braveheart/Enfeeble
+- `0x30D`: Shield/Armor Break
+- `0x30E`: Magic Wall
+- `0x30F`: Magic Boost
 
 The values these got were `0x14` (20) and `0x28` (40), possibly denoting the magnitude of the effect. Additionally, Braveheart/Enfeeble and Shield/Armor Break got the value `0xEC` (-20, presumably), when affected by the debuff versions.
 
