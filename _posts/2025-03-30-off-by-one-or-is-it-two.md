@@ -7,7 +7,7 @@ tags: disgaea savegame senators darkassembly bug
 
 So, next post was going to be about probabilities, but I really wanted to share something I just found.
 
-Disgaea: Afternoon of Darkness (and later titles) have a feature where you can submit various propositions that alter the game or unlock features to what is known as the Dark Assembly. The game generates "senator" NPCs that vote, can be bribed, or fought to pass a bill.
+Disgaea: Afternoon of Darkness (and later titles) have a feature where you can submit various propositions to what is known as the Dark Assembly, that alter the game or unlock features. The game generates "senator" NPCs that vote, can be bribed, or fought to pass a bill.
 
 The data related to senators in the Dark Assembly mechanic is stored in an array of 20-byte structures after the player's inventory in the save data. This includes the desired rarity value of items to be given as bribes. (The closer the given item's rarity to the number, the higher the disposition increase). At the moment, the known fields look like this:
 
