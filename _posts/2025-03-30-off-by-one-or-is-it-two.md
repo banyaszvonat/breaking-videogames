@@ -54,7 +54,7 @@ struct SenatorData {
 	u8;
 	Text<8> Name;
 	u8;
-	u8 SenatorDisposition;
+	s8 SenatorDisposition;
 	u8;
 };
 ```
