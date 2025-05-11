@@ -11,11 +11,11 @@ First, from the author of SilentPatch, a suite of compatibility and QoL enhancem
 
 [How a 20 year old bug in GTA San Andreas surfaced in Windows 11 24H2](https://cookieplmonster.github.io/2025/04/23/gta-san-andreas-win11-24h2-bug/)
 
-Second, a video by Nathan Baggs, about fixing a crash bug in Sid Meier's Alpha Centauri: Crossfire:
+Second, a video by Nathan Baggs, about fixing a crash bug in Sid Meier's Alpha Centauri: Alien Crossfire:
 
 [How Windows 11 Killed A 90s Classic (& My Fix)](https://www.youtube.com/watch?v=0nEy4iAdbME)
 
-The common thread between these bugs seems to be (probably unintentional) reliance on undefined behavior, specifically, uninitialized variables having values that ended up not causing issues, presumably allowing the bugs to go unnoticed. The UB just so happened to have limited ramifications all the way up to the recent update. The fault is clearly not in the OS update, but the change seems to have brought them to light after decades.
+The common thread between these bugs seems to be (probably unintentional) reliance on undefined behavior, specifically, uninitialized variables having values that ended up not causing issues. Presumably this is what allowed the bugs to go unnoticed until now. Both of these occur around calls to `EnterCriticalSection()`/`LeaveCriticalSection()`. The UB just so happened to have limited ramifications all the way up to the recent update. The fault is clearly not in the OS update, but the change seems to have brought them to light after decades.
 
 I think this could have wider consequences. These are just games breaking in funny ways, but imagine all the legacy, critical software running in more serious applications. I don't want to be alarmist, but I'm thinking there is a small chance this could be apocalyptic. I'm writing this down so I can be like "called it", if more things start breaking.
 
