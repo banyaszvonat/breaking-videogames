@@ -47,7 +47,7 @@ The interesting part is that it almost behaves like a cipher. Looking at the fir
 
 Someday, I want to take another stab at figuring out why this happens, i.e.: whether this is a bug, buggy feature, or something intentional. The PSX version of the game has a notorious bug that got us [tonyhax](https://orca.pet/tonyhax/), so I feel like this is likely a bug that happens to behave very interestingly.
 
-I have relatively little experience reverse engineering N64 code, so I want to offer a symbolic bounty: if you can locate the code handling profile name entry, i.e. where this corruption happens, and point me to the appropriate location in any applicable regional version of the binary, I will award you one (1) banyaszvonatcoin[1]. Send an e-mail to banyaszvonat@proton.me .
+I have relatively little experience reverse engineering N64 code, so I want to offer a symbolic bounty: if you can locate the code handling profile name entry, i.e. where this corruption happens, and point me to the appropriate location in any applicable regional version of the binary, I will award you one (1) banyaszvonatcoin^[1]. Send an e-mail to banyaszvonat@proton.me .
 
 I will also potentially publish your results on the blog with credit, if desired (and it's original research). If this task can be cleared by a simple google search, I will post a link to the research and a shoutout for the tip. In this case both the tipster and the publisher of the original research will get a banyaszvonatcoin.
 
