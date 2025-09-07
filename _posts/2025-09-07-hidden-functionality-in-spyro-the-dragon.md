@@ -16,13 +16,13 @@ As far as I was able to see so far, nothing sets `0x80075880`, so this might be 
 Each level within a hub world corresponds to an index, and I believe they go in the order that they appear on the inventory screen. Here is the mapping between button and level indices:
 ```
 Circle:		0 (The hub world itself)
-X:			1
-Square: 	2
-Triangle: 	3
+X:		1
+Square:		2
+Triangle:		3
 Right:		4
 Down:		5
 Left:		6 (Explicitly ignored -- worlds have at most 6 levels)
-Up:			? (See below)
+Up:		? (See below)
 ```
 
 The last one is a bit more complex: it grabs the value from `0x8007596c`, increments it by one, adjusts it to be a valid level ID^[3], and loads the corresponding level. I'm guessing this address stores the last completed or visited level.
