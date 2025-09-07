@@ -7,7 +7,7 @@ tags: tony_hawks_pro_skater thps tyr bug nintendo64
 
 Momentum on the Disgaea investigation has slowed down, but I think I'm pretty close to a breakthrough. I just need to find out where a texture gets sent to the GE, but I haven't been taking the most productive approach. In the meantime, I'm going to talk about a project on the backburner.
 
-The Nintendo 64 version of Tony Hawk's Pro Skater has a documented oddity; inputting certain names into the profile corrutps the profile text, as well as every other string on the UI.
+The Nintendo 64 version of Tony Hawk's Pro Skater has a documented oddity; inputting certain names into the profile corrupts the profile text, as well as every string on the UI.
 
 [TCRF link](https://tcrf.net/Tony_Hawk%27s_Pro_Skater_(Nintendo_64)#Unknown_Feature)
 
