@@ -7,11 +7,11 @@ tags: spyro psx ps1 undocumented levelselect
 
 So I was procrastinating on the Disgaea reverse engineering^[1] with reverse engineering Spyro the Dragon, and I think I found something wild. Short version:
 
-At least in the US version of Spyro the Dragon (BASCUS-94228SPYRO), set the 32-bit value at `0x80075880` to `1`.^[2] Open the inventory screen, and tilt the analog stick or press any of the face buttons or D-Pad inputs. You'll trigger a level transition without a skybox, and you'll arrive at one of the levels within the current hub world.
+At least in the US version of Spyro the Dragon (BASCUS-94228SPYRO), set the 32-bit value at `0x80075880` to `1`. Open the inventory screen, and tilt the analog stick or press any of the face buttons or D-Pad inputs. You'll trigger a level transition without a skybox, and you'll arrive at one of the levels within the current hub world.
 
 ![](/breaking-videogames/assets/purple.png)
 
-As far as I was able to see so far, nothing sets `0x80075880`, so this might be a remnant of a cheat used during development. The flag gets reset after the level select, so you'll have to set it again.
+As far as I was able to see so far, nothing sets `0x80075880`, so this might be a remnant of a cheat used during development. The flag gets reset after the level select, so you'll have to set it again.^[2]
 
 Each level within a hub world corresponds to an index, and I believe they go in the order that they appear on the inventory screen. Here is the mapping between button and level indices:
 ```
@@ -38,7 +38,9 @@ I couldn't find anything on the Internet about this. If it's really a new discov
 -----
 
 ^[1] Which is in turn procrastinating on the Vampire reverse engineering, but that's beside the point for now.
-^[2] Address reported by Ghidra. In RetroArch+Beetle HW this is `0x00075880`.
+
+^[2] Addresses are as reported by Ghidra. In RetroArch+Beetle HW the flag in question is `0x00075880`.
+
 ^[3] The game actually stores and uses 2-3 IDs: the level ID, the world ID, and the index of the level within the world. This branch also sets the world ID if it's needed. An ID can be derived from the others using the following relations: `world_id * 10 + level_index == level_id`, `level_id / 10 == world_id`, `level_id % 10 == level_index`
 
 [Back to index](/breaking-videogames/)
