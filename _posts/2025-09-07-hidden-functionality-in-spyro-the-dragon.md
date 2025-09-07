@@ -18,7 +18,7 @@ Each level within a hub world corresponds to an index, and I believe they go in 
 Circle:		0 (The hub world itself)
 X:		1
 Square:		2
-Triangle:		3
+Triangle:	3
 Right:		4
 Down:		5
 Left:		6 (Explicitly ignored -- worlds have at most 6 levels)
