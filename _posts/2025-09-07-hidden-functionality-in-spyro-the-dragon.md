@@ -7,7 +7,7 @@ tags: spyro psx ps1 undocumented levelselect
 
 So I was procrastinating on the Disgaea reverse engineering^[1] with reverse engineering Spyro the Dragon, and I think I found something wild. Short version:
 
-At least in the US version of Spyro the Dragon (BASCUS-94228SPYRO), set the 32-bit value at `0x80075880` to `1`. Open the inventory screen, and tilt the analog stick or press any of the face buttons or D-Pad inputs. You'll trigger a level transition without a skybox, and you'll arrive at one of the levels within the current hub world.
+At least in the US version of Spyro the Dragon (SCUS-94228), set the 32-bit value at `0x80075880` to `1`. Open the inventory screen, and tilt the analog stick or press any of the face buttons or D-Pad inputs. You'll trigger a level transition without a skybox, and you'll arrive at one of the levels within the current hub world.
 
 ![](/breaking-videogames/assets/purple.png)
 
