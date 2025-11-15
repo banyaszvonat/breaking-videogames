@@ -5,7 +5,7 @@ date: 2025-11-15 14:45:00 -0000
 tags: disgaea psp filler
 ---
 
-What do you do when you don't want to bother with zeroing an array of about 100 kilobytes on every map change? Just flag entries by clearing their name string. One byte per entry, very economical.
+What do you do when you don't want to bother with zeroing an array of about 100 kilobytes on every map change? Just flag entries as empty by clearing their name string. One byte per entry, very economical.
 
 What happens when you store text characters on two bytes?
 
@@ -13,7 +13,7 @@ What happens when you store text characters on two bytes?
 
 rave shop
 
-This isn't a bug or anything. My text decoding filter falls back on ASCII the character value is outside the Shift-JIS ranges it recognizes, and I found this particular string funny.
+This isn't a bug or anything. My text decoding filter falls back on ASCII if the character value is outside the Shift-JIS ranges it recognizes, and I found this particular string funny.
 
 -----
 
