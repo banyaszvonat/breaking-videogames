@@ -5,7 +5,7 @@ date: 2025-11-15 14:45:00 -0000
 tags: disgaea psp filler
 ---
 
-What do you do when you don't want to bother with zeroing an array about 100 kilobytes on every map change? Just flag entries bz clearing their name string. One byte per entry, very economical.
+What do you do when you don't want to bother with zeroing an array of about 100 kilobytes on every map change? Just flag entries bz clearing their name string. One byte per entry, very economical.
 
 What happens when you store text characters on two bytes?
 
