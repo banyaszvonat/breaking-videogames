@@ -7,7 +7,7 @@ tags: spyro psx overlays
 
 Happy new year. I wanted to post something this month, but ran out of time to polish this one and remove inaccuracies. I'm still posting it, but most of what follows should be considered misinformation.
 
-![](/breaking-videogames/assets/spreadmisinformation.jpg)
+![](/breaking-videogames/assets/spreadmisinformation.jpeg)
 
 Around when I made my last post, I found a tool on GitHub that could unpack Spyro's WAD files:
 
