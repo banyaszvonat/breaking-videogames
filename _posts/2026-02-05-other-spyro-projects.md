@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "other-spyro-projects"
-date: 2025-02-04 19:00:00 -0000
+date: 2026-02-04 19:00:00 -0000
 tags: spyro psx decompile
 ---
 This is a post to call attention to a couple other Spyro reverse engineering projects.
