@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "twice-the-axing-price"
-date: 2025-04-03 12:30:00 -0000
+date: 2026-04-03 12:30:00 -0000
 tags: disgaea psp graphics ge debugging textures palette
 ---
 
