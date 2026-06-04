@@ -21,7 +21,7 @@ If you have an overlay loaded in memory, but want to locate it on the disc, this
 
 Side note, in CDMage, you can verify the difference between the two LBAs. Go to `Edit -> Data Track Properties` and see the `Misc info` tab. The difference between the `Total disc time` and `Size (M:S:F)` should correspond to the difference, when converted using the `(MM * 60 * 75) + (SS * 75) + FF` formula.
 
-Limitations: This assumes that the disc is a single-track, single-session disc. If you have multiple tracks, I'm not sure the file offsets and the LBAs will stay lined up. I think the PSX API doesn't support multiple tracks, so it should be fine for the purpose of locating overlays.
+Limitations: This assumes that the disc is a single-track, single-session disc. If you have multiple tracks, I'm not sure the file offsets and the LBAs will stay lined up. I think the PSX API doesn't support multiple tracks, so it should be fine for the purpose of locating overlays. Additionally, addresses in the overlays require fixups before they can be actually usable, so ultimately you still want to dump them from memory, but the corresponding file size should give at least some clue how much memory you need to dump.
 
 ----
 
