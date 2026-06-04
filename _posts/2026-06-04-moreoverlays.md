@@ -25,6 +25,6 @@ Limitations: This assumes that the disc is a single-track, single-session disc. 
 
 ----
 
-^[1] Sleight of hand warning: I don't think it's guaranteed that the entire file is mapped as an overlay, but once you've moved to the file abstraction from raw byte chunks, you can just get away with mapping the entire file into a separate address space in Ghidra.
+^[1] Sleight of hand warning: I don't think it's guaranteed that the entire file is mapped as an overlay, but once you've moved to the file abstraction from raw byte chunks, you can just get away with mapping the entire file into a separate address space in Ghidra. Similarly, the file may contain a header before the actual code, so you'll need to line the function prologue in the file up with the address it's supposed to be at.
 
 [Back to index](/breaking-videogames/)
