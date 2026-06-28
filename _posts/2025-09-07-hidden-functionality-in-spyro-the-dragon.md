@@ -35,6 +35,8 @@ Previously I identified global variables that seem responsible for storing the c
 
 I couldn't find anything on the Internet about this. If it's really a new discovery, I'm surprised it went unnoticed for this long.
 
+Update 06/29/2026: Apparently, the level select mode was possible to enable in the August 27th prototype: [Spyro 1's Unused Cheat Codes](https://www.youtube.com/watch?v=u6OCyWVMRPA) by Hwd405.
+
 -----
 
 ^[1] Which is in turn procrastinating on the Vampire reverse engineering, but that's beside the point for now.
