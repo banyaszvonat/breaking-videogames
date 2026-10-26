@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "final-stretch-for-big-post"
+title: "post-sponsored-by-big-post"
 date: 2026-10-11 20:00:00 -0000
 tags: disgaea psp filler
 ---
